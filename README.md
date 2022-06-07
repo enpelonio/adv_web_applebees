@@ -16,7 +16,7 @@ other prerequisites:
     - python manage.py make migrations
     - python manage.py migrate
 
-## update for Advanced web:
+# update for Advanced web:
 - no need to run XAMPP
 - additional requirements:
     - pip install djangorestframework
@@ -26,6 +26,7 @@ other prerequisites:
         -GET,POST,PUT, PATCH, DELETE
     - dashboard/v1/products
         -GET,POST,PUT, PATCH, DELETE
+## Filtering and Searching with URL
 - Filtering Example (http://127.0.0.1:8000/customer/v1/customers/?lastname=Cruz&address=Cebu City&username__contains=123)
 - Searching Example (http://127.0.0.1:8000/customer/v1/customers/?search=a)
 - Specific Fields Example (http://127.0.0.1:8000/customer/v1/customers/?fields=username,contact)
