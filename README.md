@@ -16,7 +16,7 @@ other prerequisites:
     - python manage.py make migrations
     - python manage.py migrate
 
-update for Advanced web:
+## update for Advanced web:
 - no need to run XAMPP
 - additional requirements:
     - pip install djangorestframework
