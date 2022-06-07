@@ -5,7 +5,7 @@ from datetime import datetime
 # Create your models here.
 
 class Product(models.Model):
-    datereg = models.DateField(default = datetime.now())
+    datereg = models.DateField(auto_now_add=True)
     category = models.CharField(max_length = 100)
     name = models.CharField(max_length = 100)
     brand = models.CharField(max_length = 100)
@@ -23,7 +23,7 @@ class Product(models.Model):
 class Person(models.Model):
     firstname = models.CharField(max_length=100)
     lastname = models.CharField(max_length=100)
-    dateregistered = models.DateField(default = datetime.now())
+    dateregistered = models.DateField(auto_now_add=True)
     address = models.CharField(max_length=100)
     birthdate = models.DateField(default = datetime.now())
     birthplace = models.CharField(max_length=100)
