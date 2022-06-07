@@ -30,7 +30,7 @@ other prerequisites:
         -GET,POST,DELETE
 - Notes
 - Delete Example for multiple deletions
-    [
+    -[
         {
             "id": "1"
         },
