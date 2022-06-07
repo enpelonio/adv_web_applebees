@@ -1,6 +1,8 @@
+from jsonschema import ValidationError
+from numpy import product
 from pytz import timezone
 from rest_framework import serializers
-from dashboard.models import Product
+from dashboard.models import Product,OrderItems
 from  django.utils import timezone
 
 class DynamicFieldsModelSerializer(serializers.ModelSerializer):
@@ -43,5 +45,21 @@ class ProductsSerializer(DynamicFieldsModelSerializer, serializers.ModelSerializ
     class Meta:
         model = Product
         fields = '__all__'
-        #list_serializer_class = UpdateListSerializer
 
+class OrdersSerializer(DynamicFieldsModelSerializer,serializers.ModelSerializer):
+    class Meta:
+        model = OrderItems
+        fields = '__all__'
+        list_serializer_class = UpdateListSerializer
+
+    def validate(self, attrs):
+        stock = attrs['product'].stocks
+        if stock - attrs['quantity'] < 0:
+            raise serializers.ValidationError("Product stocks is insufficient for order quantity")
+        return attrs
+      
+    def create(self, validated_data):
+        ret = super().create(validated_data)
+        product = validated_data['product']
+        Product.objects.filter(id=product.id).update(stocks=product.stocks-validated_data['quantity'])
+        return ret

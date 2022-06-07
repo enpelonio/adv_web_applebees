@@ -22,10 +22,22 @@ other prerequisites:
     - pip install djangorestframework
     - pip install django-filter
 - implemented url endpoints
-    - customer/v1/customers
+    - customer/v1/customers and customer/v1/customers/<id>
         -GET,POST,PUT, PATCH, DELETE
-    - dashboard/v1/products
+    - dashboard/v1/products and dashboard/v1/products/<id>
         -GET,POST,PUT, PATCH, DELETE
+    -dashboard/v1/orders and dashboard/v1/orders/<id>
+        -GET,POST,DELETE
+- Notes
+- Delete Example for multiple deletions
+    [
+        {
+            "id": "1"
+        },
+        {
+            "id": "2"
+        },
+    ]
 ## Filtering and Searching with URL
 - Filtering Example (http://127.0.0.1:8000/customer/v1/customers/?lastname=Cruz&address=Cebu City&username__contains=123)
 - Searching Example (http://127.0.0.1:8000/customer/v1/customers/?search=a)

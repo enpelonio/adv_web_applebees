@@ -14,5 +14,6 @@ urlpatterns = [
     
     path('v1/products',v1Views.ProductsView.as_view()),
     path('v1/products/<str:product_id>',v1Views.ProductsView.as_view()),
-    
+    path('v1/orders',v1Views.OrdersView.as_view()),
+    path('v1/orders/<str:order_id>',v1Views.OrdersView.as_view()),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
