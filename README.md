@@ -23,11 +23,11 @@ other prerequisites:
     - pip install django-filter
 - implemented url endpoints
     - customer/v1/customers and customer/v1/customers/<id>
-        -GET,POST,PUT, PATCH, DELETE
+        - Methods: GET,POST,PUT, PATCH, DELETE
     - dashboard/v1/products and dashboard/v1/products/<id>
-        -GET,POST,PUT, PATCH, DELETE
+        - Methods: GET,POST,PUT, PATCH, DELETE
     - dashboard/v1/orders and dashboard/v1/orders/<id>
-        -GET,POST,DELETE
+        - Methods: GET,POST,DELETE
 - Notes
     - Delete Example for multiple deletions :
     [
