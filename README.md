@@ -26,7 +26,7 @@ other prerequisites:
         -GET,POST,PUT, PATCH, DELETE
     - dashboard/v1/products
         -GET,POST,PUT, PATCH, DELETE
-- [Filtering Example](http://127.0.0.1:8000/customer/v1/customers/?lastname=Cruz&address=Cebu City&username__contains=123)
-- [Searching Example](http://127.0.0.1:8000/customer/v1/customers/?search=a)
-- [Specific Fields Example](http://127.0.0.1:8000/customer/v1/customers/?fields=username,contact)
-- [Combination Example (can be in any order)] (http://127.0.0.1:8000/accounts/v1/customers/?fields=username,contact&    username=a&address=Cebu City&search=a)
+- Filtering Example (http://127.0.0.1:8000/customer/v1/customers/?lastname=Cruz&address=Cebu City&username__contains=123)
+- Searching Example (http://127.0.0.1:8000/customer/v1/customers/?search=a)
+- Specific Fields Example (http://127.0.0.1:8000/customer/v1/customers/?fields=username,contact)
+- Combination Example (can be in any order) (http://127.0.0.1:8000/accounts/v1/customers/?fields=username,contact&username=a&address=Cebu City&search=a)
