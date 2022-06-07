@@ -29,8 +29,8 @@ other prerequisites:
     -dashboard/v1/orders and dashboard/v1/orders/<id>
         -GET,POST,DELETE
 - Notes
-    - Delete Example for multiple deletions
-    - [
+    - Delete Example for multiple deletions :
+    [
         {
             "id": "1"
         },
