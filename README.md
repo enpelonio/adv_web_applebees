@@ -26,7 +26,7 @@ other prerequisites:
         -GET,POST,PUT, PATCH, DELETE
     - dashboard/v1/products and dashboard/v1/products/<id>
         -GET,POST,PUT, PATCH, DELETE
-    -dashboard/v1/orders and dashboard/v1/orders/<id>
+    - dashboard/v1/orders and dashboard/v1/orders/<id>
         -GET,POST,DELETE
 - Notes
     - Delete Example for multiple deletions :
